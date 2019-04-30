@@ -2,15 +2,12 @@
 var canvas;
 
 function createPage(){
-    var myDiv = document.createElement("div");
-    myDiv.width = document.documentElement.clientWidth;
-    myDiv.height = document.documentElement.clientHeight; 
-    document.body.appendChild(myDiv);
+
     
     canvas = document.createElement("canvas");
     canvas.width = 600;
     canvas.height = 400;
-    myDiv.appendChild(canvas);
+    document.body.appendChild(canvas);
     
     drawImages();
 }
@@ -22,8 +19,8 @@ function drawImages() {
 
     //var x = Math.floor(Math.random() * (canvas.width/3)) + canvas.width/3;
     //var y = Math.floor(Math.random() * (canvas.height/3)) + canvas.height/3;
-    var xForWidth = 300;
-    var yForHeight = 200;
+    //var xForWidth = 300;
+    //var yForHeight = 200;
     
     var countDrawnImages = 0;
     var image;
@@ -52,7 +49,7 @@ function drawImages() {
                 drawText();
             }
         }
-    //}
+    }
 }
 
 function drawText() {
