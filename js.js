@@ -25,7 +25,7 @@ function drawImages() {
     
     var countDrawnImages = 0;
     var image;
-    for (var i = 0; i < 4; i++){
+    for (var i = 0; i < 1; i++){
         image = new Image();
         image.crossOrigin = "Anonymous";
         
