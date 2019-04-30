@@ -44,17 +44,12 @@ function drawImages() {
         
         image.onload = function() {
             context.drawImage(image, xForBeginning, yForBeginning);
-            countDrawnImages += 1;         
-            if (countDrawnImages == 4) {
-                drawText();
-            }
+            //countDrawnImages += 1;         
+            //if (countDrawnImages == 4) {
+            //    drawText();
+            //}
         }
     }
 }
 
-function drawText() {
-    
-}
-
 createPage();
-
