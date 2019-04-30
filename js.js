@@ -31,8 +31,7 @@ function drawImages(canvas) {
         image.src = 'https://unsplash.com/collections/' + collection + '/' + xForWidth + 'x' + yForHeight;  
         image.onload = function() {
             context.drawImage(img, xForBeginning,yForBeginning);
-            countDrawnImages += 1;
-            
+            countDrawnImages += 1;         
             if (countDrawnImages == 4) {
                 drawText(canvas);
             }
@@ -43,3 +42,7 @@ function drawImages(canvas) {
 function drawText(canvas) {
     
 }
+
+document.body.appendChild(canvas);
+drawImages(canvas);
+
