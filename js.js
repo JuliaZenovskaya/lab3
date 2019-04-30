@@ -42,8 +42,9 @@ function drawImages() {
             yForBeginning = y;
         }
         image.src = 'https://source.unsplash.com/' + xForWidth + 'x' + yForHeight;
+        
         image.onload = function() {
-            context.drawImage(img, xForBeginning,yForBeginning);
+            context.drawImage(image, xForBeginning, yForBeginning);
             countDrawnImages += 1;         
             if (countDrawnImages == 4) {
                 drawText();
