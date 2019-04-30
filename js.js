@@ -32,7 +32,7 @@ function drawImages() {
         
         //var xForWidth = x;
         
-        image.src = 'https://source.unsplash.com/collection/462839/300x200';
+        image.src = 'https://source.unsplash.com/collection/462839/' + x +'x' + y;
         
         image.onload = function() {
             images.push(image);
