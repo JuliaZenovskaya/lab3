@@ -12,7 +12,7 @@ function drawImages(canvas) {
     
     var countDrawnImages = 0;
     var image;
-    for (var i = 0; i < 4; i++){
+    for (var i = 0; i < 1; i++){
         image = new Inage();
         image.crossOrigin = "Anonymous";
         
@@ -28,7 +28,7 @@ function drawImages(canvas) {
             yForHeight = canvas.height - y;
             yForBeginning = y;
         }
-        image.src = 'https://source.unsplash.com/collection/' + collection + '/' + '300x200';
+        image.src = 'https://source.unsplash.com/collection/' + collection + '/' + xForWidth + 'x' + yForHeight;
         image.onload = function() {
             context.drawImage(img, xForBeginning,yForBeginning);
             countDrawnImages += 1;         
