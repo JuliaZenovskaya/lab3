@@ -22,17 +22,17 @@ function drawImages() {
     var x = 300;
     var y = 200;
     
-    var countDrawnImages = 0;
-
+    var collections = [762960, 162326, 2203755, 2446638, 1254524, 3178572, 1127828, 3106804, 193];
     var countLoadedImages = 0;
-    var images = new Array();
+    var images = [];
+    
     for (var i = 0; i < 4; i++){
         var image = new Image();
         image.crossOrigin = "Anonymous";
         
         //var xForWidth = x;
-        
-        image.src = 'https://source.unsplash.com/' + x +'x' + y;
+        var randomCollection = collections[Math.floor(Math.random()*collections.length)];
+        image.src = 'https://source.unsplash.com/collections/'+ randomCollection + '/' + x +'x' + y;
         
         image.onload = function() {
             images.push(image);
