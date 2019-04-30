@@ -19,7 +19,6 @@ function createPage(){
 
 function drawImages() {
     var context = document.createElement("2d");
-    var collection = 3178572;
 
     //var x = Math.floor(Math.random() * (canvas.width/3)) + canvas.width/3;
     //var y = Math.floor(Math.random() * (canvas.height/3)) + canvas.height/3;
@@ -44,7 +43,7 @@ function drawImages() {
             yForHeight = canvas.height - y;
             yForBeginning = y;
         }
-        image.src = 'https://source.unsplash.com/collection/1538150/' + xForWidth + 'x' + yForHeight;
+        image.src = 'https://source.unsplash.com/' + xForWidth + 'x' + yForHeight;
         image.onload = function() {
             context.drawImage(img, xForBeginning,yForBeginning);
             countDrawnImages += 1;         
