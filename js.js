@@ -26,7 +26,7 @@ function drawImages() {
     var countDrawnImages = 0;
     var image;
     for (var i = 0; i < 4; i++){
-        image = new Inage();
+        image = new Image();
         image.crossOrigin = "Anonymous";
         
         var xForWidth = x;
