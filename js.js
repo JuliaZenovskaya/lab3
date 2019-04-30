@@ -28,7 +28,7 @@ function drawImages(canvas) {
             yForHeight = canvas.height - y;
             yForBeginning = y;
         }
-        image.src = 'https://unsplash.com/collections/' + collection + '/' + xForWidth + 'x' + yForHeight;  
+        image.src = 'https://source.unsplash.com/collection/' + collection + '/' + xForWidth + 'x' + yForHeight;
         image.onload = function() {
             context.drawImage(img, xForBeginning,yForBeginning);
             countDrawnImages += 1;         
