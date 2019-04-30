@@ -24,6 +24,7 @@ function drawImages() {
     
     var countDrawnImages = 0;
 
+    var images = new Array();
     for (var i = 0; i < 4; i++){
         var image = new Image();
         image.crossOrigin = "Anonymous";
@@ -43,7 +44,8 @@ function drawImages() {
         image.src = 'https://source.unsplash.com/collection/462839/300x200';
         
         image.onload = function() {
-            context.drawImage(image, xForBeginning, yForBeginning);
+            images.push(image);
+            context.drawImage(images[i], xForBeginning, yForBeginning);
             //countDrawnImages += 1;         
             //if (countDrawnImages == 4) {
             //    drawText();
