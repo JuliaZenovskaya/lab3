@@ -21,8 +21,10 @@ function drawImages() {
     var context = document.createElement("2d");
     var collection = 3178572;
 
-    var x = Math.floor(Math.random() * (canvas.width/3)) + canvas.width/3;
-    var y = Math.floor(Math.random() * (canvas.height/3)) + canvas.height/3;
+    //var x = Math.floor(Math.random() * (canvas.width/3)) + canvas.width/3;
+    //var y = Math.floor(Math.random() * (canvas.height/3)) + canvas.height/3;
+    var x = 600;
+    var y = 400;
     
     var countDrawnImages = 0;
     var image;
