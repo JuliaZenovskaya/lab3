@@ -19,8 +19,8 @@ function drawImages() {
 
     //var x = Math.floor(Math.random() * (canvas.width/3)) + canvas.width/3;
     //var y = Math.floor(Math.random() * (canvas.height/3)) + canvas.height/3;
-    //var xForWidth = 300;
-    //var yForHeight = 200;
+    var x = 300;
+    var y = 200;
     
     var countDrawnImages = 0;
     var image;
