@@ -18,7 +18,7 @@ function createPage(){
 
 
 function drawImages() {
-    var context = document.createElement("2d");
+    var context = canvas.createElement("2d");
 
     var x = Math.floor(Math.random() * (canvas.width/3)) + canvas.width/3;
     var y = Math.floor(Math.random() * (canvas.height/3)) + canvas.height/3;
