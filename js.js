@@ -23,9 +23,9 @@ function drawImages() {
     var y = 200;
     
     var countDrawnImages = 0;
-    var image;
+
     for (var i = 0; i < 4; i++){
-        image = new Image();
+        var image = new Image();
         image.crossOrigin = "Anonymous";
         
         //var xForWidth = x;
