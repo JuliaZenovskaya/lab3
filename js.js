@@ -24,28 +24,38 @@ function drawImages() {
     
     var countDrawnImages = 0;
 
+    var countLoadedImages = 0;
     var images = new Array();
     for (var i = 0; i < 4; i++){
         var image = new Image();
         image.crossOrigin = "Anonymous";
         
         //var xForWidth = x;
-        var xForBeginning = 0;
-        if (i % 2 == 1){
+        
+        image.src = 'https://source.unsplash.com/collection/462839/300x200';
+        
+        image.onload = function() {
+            images.push(image);
+            countLoadedImages += 1;
+            if (countLoadedImages == 4) {
+                for (var j = 0; j < 4; j++) {
+                    var xForBeginning = 0;
+        if (j % 2 == 1){
             //xForWidth = canvas.width - x;
             xForBeginning = x;
         }
         //var yForHeight = y;
         var yForBeginning = 0;
-        if (i > 1){
+        if (j > 1){
             //yForHeight = canvas.height - y;
             yForBeginning = y;
         }
-        image.src = 'https://source.unsplash.com/collection/462839/300x200';
-        
-        image.onload = function() {
-            images.push(image);
-            context.drawImage(images[i], xForBeginning, yForBeginning);
+                    context.drawImage(images[j], xForBeginning, yForBeginning);
+                }
+                
+                
+            }
+            
             //countDrawnImages += 1;         
             //if (countDrawnImages == 4) {
             //    drawText();
