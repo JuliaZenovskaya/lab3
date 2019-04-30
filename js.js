@@ -26,7 +26,7 @@ function drawImages() {
     var countDrawnImages = 0;
     var image = new Image();
     image.crossOrigin = "Anonymous";
-    image.src = 'https://source.unsplash.com/' + canvas.width + 'x' + canvas.height;
+    image.src = 'https://source.unsplash.com/' + x + 'x' + y;
     image.onload = function(){
         context.drawImage(image, 0,0);
     }
