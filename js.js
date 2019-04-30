@@ -43,7 +43,7 @@ function drawImages() {
             //yForHeight = canvas.height - y;
             yForBeginning = y;
         }
-        image.src = 'https://source.unsplash.com/' + xForWidth + 'x' + yForHeight;
+        image.src = 'https://source.unsplash.com/300x200';
         
         image.onload = function() {
             context.drawImage(image, xForBeginning, yForBeginning);
