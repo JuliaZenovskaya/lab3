@@ -32,7 +32,7 @@ function drawImages() {
         
         //var xForWidth = x;
         var randomCollection = collections[Math.floor(Math.random()*collections.length)];
-        image.src = 'https://source.unsplash.com/collection/'+ randomCollection + '/' + x +'x' + y;
+        image.src = 'https://source.unsplash.com/' + x +'x' + y + '/?outdoor';
         
         image.onload = function() {
             images.push(image);
