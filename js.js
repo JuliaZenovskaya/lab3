@@ -19,7 +19,8 @@ function drawImages() {
     var countLoadedImages = 0;
     var images = [];
     
-    for (var i = 0; i < 4; i++){
+    var i = 0;
+    while (i < 4){
         var image = new Image();
         image.crossOrigin = "Anonymous";
         
@@ -41,6 +42,7 @@ function drawImages() {
                     context.drawImage(images[j], xForBeginning, yForBeginning);
                 }
             }
+            i += 1;
         }
     }
 }
