@@ -20,31 +20,34 @@ function drawImages() {
     var images = [];
     
     var i = 0;
-    while (i < 4){
+    for (i = 0; i < 4; i++){
         var image = new Image();
         image.crossOrigin = "Anonymous";
         
         image.src = "https://source.unsplash.com/collection/" + collections[i] + "/300x200";
         
-        image.onload = function() {
-            images[images.length] = image;
-            countLoadedImages += 1;
-            if (countLoadedImages == 4) {
-                for (var j = 0; j < 4; j++) {
-                    var xForBeginning = 0;
-                    if (j % 2 == 1){
-                        xForBeginning = x;
+        image.onload = (function(image) {
+            return function() {
+                images.push(image);
+                countLoadedImages += 1;
+                
+                if (countLoadedImages == 4) {
+                    for (var j = 0; j < 4; j++) {
+                        var xForBeginning = 0;
+                        if (j % 2 == 1){
+                            xForBeginning = x;
+                        }
+                        var yForBeginning = 0;
+                        if (j > 1){
+                            yForBeginning = y;
+                        }
+                        context.drawImage(images[j], xForBeginning, yForBeginning);
                     }
-                    var yForBeginning = 0;
-                    if (j > 1){
-                        yForBeginning = y;
-                    }
-                    context.drawImage(images[j], xForBeginning, yForBeginning);
                 }
             }
-            i += 1;
-        }
+        })(image); 
     }
+    
 }
 
 createPage();
