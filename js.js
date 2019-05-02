@@ -31,8 +31,10 @@ function drawImages() {
         image.crossOrigin = "Anonymous";
         
         //var xForWidth = x;
-        var randomCollection = collections[Math.floor(Math.random()*collections.length)];
-        image.src = 'https://source.unsplash.com/collection/' + collections[i] + '/' + x +'x' + y;
+        
+        if (collections)
+        
+        image.src = "https://source.unsplash.com/collection/" + collections[i] + "/300x200";
         
         image.onload = function() {
             images.push(image);
@@ -40,16 +42,16 @@ function drawImages() {
             if (countLoadedImages == 4) {
                 for (var j = 0; j < 4; j++) {
                     var xForBeginning = 0;
-        if (j % 2 == 1){
-            //xForWidth = canvas.width - x;
-            xForBeginning = x;
-        }
-        //var yForHeight = y;
-        var yForBeginning = 0;
-        if (j > 1){
-            //yForHeight = canvas.height - y;
-            yForBeginning = y;
-        }
+                    if (j % 2 == 1){
+                        //xForWidth = canvas.width - x;
+                        xForBeginning = x;
+                    }
+                    //var yForHeight = y;
+                    var yForBeginning = 0;
+                    if (j > 1){
+                        //yForHeight = canvas.height - y;
+                        yForBeginning = y;
+                    }
                     context.drawImage(images[j], xForBeginning, yForBeginning);
                 }
                 
