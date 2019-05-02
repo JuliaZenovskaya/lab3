@@ -22,7 +22,7 @@ function drawImages() {
     var x = 300;
     var y = 200;
     
-    var collections = [762960, 162326, 2203755, 2446638, 1254524, 3178572, 1127828, 3106804, 193];
+    var collections = [3178572, 502925, 583479, 311028];
     var countLoadedImages = 0;
     var images = [];
     
@@ -32,7 +32,7 @@ function drawImages() {
         
         //var xForWidth = x;
         var randomCollection = collections[Math.floor(Math.random()*collections.length)];
-        image.src = 'https://source.unsplash.com/' + x +'x' + y + '/?outdoor';
+        image.src = 'https://source.unsplash.com/collection/' + collections[i] + '/' + x +'x' + y;
         
         image.onload = function() {
             images.push(image);
