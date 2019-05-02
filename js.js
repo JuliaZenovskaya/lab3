@@ -6,6 +6,22 @@ function createPage(){
     canvas.height = 400;
     document.body.appendChild(canvas);
     
+    var saveLink = document.createElement("a");
+    saveLink.hidden = true;
+
+    var button = document.createElement("button");
+    button.textContent = "SAVE";
+    button.style.left = 8 + "px";
+    button.style.top = 410 + "px";
+    button.style.position = "absolute";
+    button.style.color = "green";
+    button.onclick = function(){
+        saveLink.href = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+        saveLink.download = "MyCollage.png";
+        saveLink.click();
+    }
+    document.body.appendChild(button);
+    
     drawImages();
 }
 
@@ -43,11 +59,18 @@ function drawImages() {
                         }
                         context.drawImage(images[j], xForBeginning, yForBeginning);
                     }
+                    drawText();
                 }
             }
         })(image); 
     }
     
 }
+
+
+function drawText(){
+    
+}
+
 
 createPage();
