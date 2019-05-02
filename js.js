@@ -26,7 +26,7 @@ function drawImages() {
         image.src = "https://source.unsplash.com/collection/" + collections[i] + "/300x200";
         
         image.onload = function() {
-            images.push(image);
+            images[images.length] = image;
             countLoadedImages += 1;
             if (countLoadedImages == 4) {
                 for (var j = 0; j < 4; j++) {
@@ -38,20 +38,7 @@ function drawImages() {
                     if (j > 1){
                         yForBeginning = y;
                     }
-                    
-                    if (j == 0){
-                        context.drawImage(images[0], xForBeginning, yForBeginning);
-                    }
-                    if (j ==1){
-                        context.drawImage(images[1], xForBeginning, yForBeginning);
-                    }
-                    if (j == 2){
-                        context.drawImage(images[2], xForBeginning, yForBeginning);
-                    }
-                    if (j == 3){
-                        context.drawImage(images[3], xForBeginning, yForBeginning);
-                    }
-                    //context.drawImage(images[j], xForBeginning, yForBeginning);
+                    context.drawImage(images[j], xForBeginning, yForBeginning);
                 }
             }
         }
