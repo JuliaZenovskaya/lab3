@@ -1,9 +1,6 @@
-
 var canvas;
 
-function createPage(){
-
-    
+function createPage(){  
     canvas = document.createElement("canvas");
     canvas.width = 600;
     canvas.height = 400;
@@ -13,12 +10,8 @@ function createPage(){
 }
 
 
-
 function drawImages() {
     var context = canvas.getContext("2d");
-
-    //var x = Math.floor(Math.random() * (canvas.width/3)) + canvas.width/3;
-    //var y = Math.floor(Math.random() * (canvas.height/3)) + canvas.height/3;
     var x = 300;
     var y = 200;
     
@@ -30,10 +23,6 @@ function drawImages() {
         var image = new Image();
         image.crossOrigin = "Anonymous";
         
-        //var xForWidth = x;
-        
-        if (collections)
-        
         image.src = "https://source.unsplash.com/collection/" + collections[i] + "/300x200";
         
         image.onload = function() {
@@ -43,25 +32,28 @@ function drawImages() {
                 for (var j = 0; j < 4; j++) {
                     var xForBeginning = 0;
                     if (j % 2 == 1){
-                        //xForWidth = canvas.width - x;
                         xForBeginning = x;
                     }
-                    //var yForHeight = y;
                     var yForBeginning = 0;
                     if (j > 1){
-                        //yForHeight = canvas.height - y;
                         yForBeginning = y;
                     }
-                    context.drawImage(images[j], xForBeginning, yForBeginning);
+                    
+                    if (j == 0){
+                        context.drawImage(images[0], xForBeginning, yForBeginning);
+                    }
+                    if (j ==1){
+                        context.drawImage(images[1], xForBeginning, yForBeginning);
+                    }
+                    if (j == 2){
+                        context.drawImage(images[2], xForBeginning, yForBeginning);
+                    }
+                    if (j == 3){
+                        context.drawImage(images[3], xForBeginning, yForBeginning);
+                    }
+                    //context.drawImage(images[j], xForBeginning, yForBeginning);
                 }
-                
-                
             }
-            
-            //countDrawnImages += 1;         
-            //if (countDrawnImages == 4) {
-            //    drawText();
-            //}
         }
     }
 }
