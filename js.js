@@ -68,7 +68,7 @@ function drawImages() {
 
 
 function createRequest(){
-    requestAddress = "http://api.forismatic.com/api/1.0/";
+    requestAddress = "https://api.forismatic.com/api/1.0/";
     requestMethod = "method=getQuote";
     requestFormat = "format=jsonp";
     requestLanguage = "lang=ru";
